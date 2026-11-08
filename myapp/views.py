@@ -16,6 +16,9 @@ def team(request):
     return render(request, 'team.html')
 def blog(request):
     return render(request, 'blog.html')
+
+def contact(request):
+    return render(request, 'contact.html')
 def blog_details(request):
     return render(request, 'blog-details.html')
 def portfolio_details(request):
