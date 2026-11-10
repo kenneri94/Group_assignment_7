@@ -1,0 +1,23 @@
+# Virtual Environment
+venv/
+env/
+*.venv
+
+# Python Cache & Compiled Files
+__pycache__/
+*.pyc
+
+# Local SQLite Database
+db.sqlite3
+db.sqlite3-journal
+
+# Environment Variables & Secrets
+.env
+
+# IDE settings
+.idea/
+.vscode/
+
+# Static / Media directories (if generated)
+/staticfiles/
+/media/
