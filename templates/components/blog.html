@@ -1,24 +1,7 @@
 
-{% extends 'base.html' %}
-{% load static %}
-{#{% block title %} Blog {% endblock %}#}
+{%load static%}
 
 {% block content %}
-
-
-    <!-- Page Title -->
-    <div class="page-title dark-background">
-      <div class="container position-relative">
-        <h1>Blog</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li class="current">Blog</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
 
     <!-- Blog Posts Section -->
     <section id="blog-posts" class="blog-posts section">
@@ -36,7 +19,7 @@
               <p class="post-category">Politics</p>
 
               <h2 class="title">
-                <a href="{% url 'blog-details' %}">Dolorum optio tempore voluptas dignissimos</a>
+                <a href="{% url 'blog_details' %}">Dolorum optio tempore voluptas dignissimos</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -62,7 +45,7 @@
               <p class="post-category">Sports</p>
 
               <h2 class="title">
-                <a href="{% url 'blog-details' %}">Nisi magni odit consequatur autem nulla dolorem</a>
+                <a href="{% url 'blog_details' %}">Nisi magni odit consequatur autem nulla dolorem</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -88,7 +71,7 @@
               <p class="post-category">Entertainment</p>
 
               <h2 class="title">
-                <a href="{% url 'blog-details' %}">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+                <a href="{% url 'blog_details' %}">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -114,7 +97,7 @@
               <p class="post-category">Sports</p>
 
               <h2 class="title">
-                <a href="{% url 'blog-details' %}">Non rem rerum nam cum quo minus olor distincti</a>
+                <a href="{% url 'blog_details' %}">Non rem rerum nam cum quo minus olor distincti</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -140,7 +123,7 @@
               <p class="post-category">Politics</p>
 
               <h2 class="title">
-                <a href="{% url 'blog-details' %}">Accusamus quaerat aliquam qui debitis facilis consequatur</a>
+                <a href="{% url 'blog_details' %}">Accusamus quaerat aliquam qui debitis facilis consequatur</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -166,7 +149,7 @@
               <p class="post-category">Entertainment</p>
 
               <h2 class="title">
-                <a href="{% url 'blog-details' %}">Distinctio provident quibusdam numquam aperiam aut</a>
+                <a href="{% url 'blog_details' %}">Distinctio provident quibusdam numquam aperiam aut</a>
               </h2>
 
               <div class="d-flex align-items-center">

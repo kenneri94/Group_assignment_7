@@ -31,6 +31,7 @@
     <!-- Main CSS File -->
     <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 
+
     {% block extra_css %} {% endblock %}
     <!-- =======================================================
     * Template Name: Imperial
@@ -41,7 +42,7 @@
     ======================================================== -->
 </head>
 
-<body class="index-page">
+<body class="{% block body_class %} {% endblock%}">
 
 {# Navigation page#}
 
@@ -49,34 +50,43 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
         <a href="{% url 'home' %}" class="logo d-flex align-items-center">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <!-- <img src="assets/img/logo-2.png" alt=""> -->
+            
             <h1 class="sitename">Imperial</h1>
         </a>
 
-        <nav id="navmenu" class="navmenu">
-            <ul>
-                <li><a href="{% url 'home' %}" class="active">Home</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="{% url 'services' %}">Services</a></li>
-                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
-                <li><a href="{% url 'blog' %}">Blog</a></li>
-                <li><a href="{% url 'team' %}">Team</a></li>
-                <li class="dropdown"><a href="#"><span>More details</span> <i
-                        class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="{% url 'blog-details' %}">Blog Details</a></li>
-                        <li><a href="{% url 'portfolio-details' %}">Portfolio Details</a></li>
-                        <li><a href="{% url 'services-details' %}">Services Details</a></li>
-                    </ul>
-                </li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
-            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
+    <nav id="navmenu" class="navmenu">
+    <ul>
+        <li>
+            <a href="{% url 'home' %}#hero">Home</a>
+        </li>
 
+        <li>
+            <a href="{% url 'home' %}#about">About</a>
+        </li>
+
+        <li>
+            <a href="{% url 'home' %}#services">Services</a>
+        </li>
+
+        <li>
+            <a href="{% url 'home' %}#portfolio">Portfolio</a>
+        </li>
+
+        <li>
+            <a href="{% url 'home' %}#team">Team</a>
+        </li>
+
+        <li>
+            <a href="{% url 'home' %}#contact">Contact</a>
+        </li>
+    </ul>
+
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
     </div>
 </header>
+
+
 
 
 {#    MAIN CONTENT #}

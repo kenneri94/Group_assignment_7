@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block content %}
 
     <!-- Page Title -->
@@ -110,8 +109,8 @@
                 <li><strong>Category</strong> Web design</li>
                 <li><strong>Client</strong> ASU Company</li>
                 <li><strong>Project date</strong> 01 March, 2020</li>
-                <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
-                <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
+                <li><strong>Project URL</strong> <a href="{%url 'portfolio_details'%}">www.example.com</a></li>
+                <li><a href="{% url 'portfolio_details' %}" class="btn-visit align-self-start">Visit Website</a></li>
               </ul>
             </div>
           </div>

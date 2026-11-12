@@ -1,25 +1,7 @@
-{% extends 'base.html' %}
 
-{% load static %}
-
-{% block title %} Blog Details {% endblock %}
+{%load static%}
 
 {% block content %}
-
-
-    <!-- Page Title -->
-    <div class="page-title dark-background">
-      <div class="container position-relative">
-        <h1>Blog Details</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li class="current">Blog Details</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
 
     <div class="container">
       <div class="row">
@@ -40,9 +22,9 @@
 
                 <div class="meta-top">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{% url 'blog_details' %}">John Doe</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{% url 'blog_details' %}"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{% url 'blog-details' %}">12 Comments</a></li>
                   </ul>
                 </div><!-- End meta top -->
 
@@ -117,7 +99,7 @@
                 <div class="d-flex">
                   <div class="comment-img"><img src="{% static 'assets/img/blog/comments-1.jpg'%}" alt=""></div>
                   <div>
-                    <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <h5><a href="#">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                     <time datetime="2020-01-01">01 Jan,2022</time>
                     <p>
                       Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad aut sapiente quis molestiae est qui cum soluta.
@@ -131,7 +113,7 @@
                 <div class="d-flex">
                   <div class="comment-img"><img src="{% static 'assets/img/blog/comments-2.jpg' %}" alt=""></div>
                   <div>
-                    <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                    <h5><a href="#">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                     <time datetime="2020-01-01">01 Jan,2022</time>
                     <p>
                       Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
@@ -143,7 +125,7 @@
                   <div class="d-flex">
                     <div class="comment-img"><img src="{% static 'assets/img/blog/comments-3.jpg'%}" alt=""></div>
                     <div>
-                      <h5><a href="">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+                      <h5><a href="#">Lynda Small</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
                       <time datetime="2020-01-01">01 Jan,2022</time>
                       <p>
                         Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
@@ -282,7 +264,7 @@
               <div class="post-item">
                 <img src="{% static 'assets/img/blog/blog-recent-1.jpg'%}" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Nihil blanditiis at in nihil autem</a></h4>
+                  <h4><a href="{% url 'blog_details' %}">Nihil blanditiis at in nihil autem</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
               </div><!-- End recent post item-->
@@ -290,7 +272,7 @@
               <div class="post-item">
                 <img src="{%  static 'assets/img/blog/blog-recent-2.jpg'%}" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Quidem autem et impedit</a></h4>
+                  <h4><a href="{% url 'blog_details' %}">Quidem autem et impedit</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
               </div><!-- End recent post item-->
@@ -298,7 +280,7 @@
               <div class="post-item">
                 <img src="{%  static 'assets/img/blog/blog-recent-3.jpg'%}" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                  <h4><a href="{% url 'blog_details' %}">Id quia et et ut maxime similique occaecati ut</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
               </div><!-- End recent post item-->
@@ -306,7 +288,7 @@
               <div class="post-item">
                 <img src="{% static 'assets/img/blog/blog-recent-4.jpg'%}" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Laborum corporis quo dara net para</a></h4>
+                  <h4><a href="{% url 'blog_details' %}">Laborum corporis quo dara net para</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
               </div><!-- End recent post item-->
@@ -314,7 +296,7 @@
               <div class="post-item">
                 <img src="{% static 'assets/img/blog/blog-recent-5.jpg'%}" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                  <h4><a href="{% url 'blog_details' %}">Et dolores corrupti quae illo quod dolor</a></h4>
                   <time datetime="2020-01-01">Jan 1, 2020</time>
                 </div>
               </div><!-- End recent post item-->

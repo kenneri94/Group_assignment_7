@@ -179,6 +179,17 @@ h6 {
   --background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Solid header on inner pages (every page except the homepage)
+------------------------------*/
+body:not(.index-page) .header {
+  --background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Push inner-page content below the fixed header */
+body:not(.index-page) main.main {
+  padding-top: 90px;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -2138,4 +2149,9 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+/* TEMPORARY TEST: Hide the loading screen */
+#preloader {
+    display: none !important;
 }

@@ -1,0 +1,18 @@
+{%load static%}
+
+<!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="{% static 'assets/img/hero-bg.jpg'%}" class="hero-bg" alt="" data-aos="fade-in">
+
+      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+        <img src="{% static 'assets/img/logo.png'%}" class="img-fluid mb-3" alt="">
+        <h2>Welcome to Imperial studios</h2>
+        <p>We create <span class="typed" data-typed-items="Functional Websites, Creative Ads, Mobile Apps"></span></p>
+        <div>
+          <a href="{% url 'about' %}" class="cta-btn">Get Started</a>
+          <a href="{% url 'services' %}" class="cta-btn2">Our Services</a>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
